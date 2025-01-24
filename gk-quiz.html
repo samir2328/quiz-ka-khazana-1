@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Knowledge Quiz - Quiz Ka Khazana</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-logo">Quiz Ka Khazana</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">← Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="quiz-container section active">
+        <h2>General Knowledge Quiz</h2>
+        
+        <div id="difficultySelect" class="difficulty-select">
+            <h3>Select Difficulty Level</h3>
+            <div class="difficulty-buttons">
+                <button onclick="startQuiz('easy')">Easy</button>
+                <button onclick="startQuiz('medium')">Medium</button>
+                <button onclick="startQuiz('hard')">Hard</button>
+            </div>
+        </div>
+
+        <div id="quizArea" class="hidden">
+            <div class="quiz-header">
+                <span id="questionNumber">Question 1/10</span>
+                <span id="timer">30s</span>
+            </div>
+            <div id="question" class="question-box"></div>
+            <div id="options" class="options-grid"></div>
+        </div>
+    </div>
+
+    <script src="js/gk-quiz.js"></script>
+</body>
+</html> 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Quiz - Quiz Ka Khazana</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-logo">Quiz Ka Khazana</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">← Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="quiz-container section active">
+        <h2>Math Quiz Challenge</h2>
+        
+        <div id="levelSelect" class="level-select">
+            <h3>Select Level</h3>
+            <div class="level-grid">
+                <!-- Levels will be added dynamically -->
+            </div>
+        </div>
+
+        <div id="quizArea" class="hidden">
+            <div class="quiz-header">
+                <span id="questionNumber">Question 1/10</span>
+                <span id="timer">30s</span>
+            </div>
+            <div id="question" class="question-box"></div>
+            <div id="options" class="options-grid"></div>
+        </div>
+
+        <div id="resultPopup" class="result-popup hidden">
+            <div class="popup-content">
+                <div class="result-icon">❌</div>
+                <h3>Wrong Answer!</h3>
+                <p>The correct answer was: <span id="correctAnswer"></span></p>
+                <div class="popup-buttons">
+                    <button id="retryButton" class="retry-btn">Try Again</button>
+                    <button id="backToLevels" class="back-btn">Back to Levels</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="successPopup" class="result-popup hidden">
+            <div class="popup-content success">
+                <div class="result-icon">🎉</div>
+                <h3 class="success-title">Congratulations!</h3>
+                <p>You've completed Level <span id="completedLevel"></span></p>
+                <div class="popup-buttons">
+                    <button id="nextLevelButton" class="next-btn">Next Level</button>
+                    <button id="backToLevelsButton" class="back-btn">Back to Levels</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="unlockLevelPopup" class="result-popup hidden">
+            <div class="popup-content next-level">
+                <div class="result-icon">🔓</div>
+                <h3 class="next-level-title">Want to unlock Level <span id="wantedLevel"></span>?</h3>
+                <p>First complete Level <span id="currentRequiredLevel"></span> to unlock it!</p>
+                <div class="popup-buttons">
+                    <button id="playCurrentButton" class="play-btn">Play Level <span id="playCurrentLevel"></span> Now</button>
+                    <button id="closeUnlockPopup" class="back-btn">Back to Levels</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/math-quiz.js" type="module"></script>
+</body>
+</html> 
